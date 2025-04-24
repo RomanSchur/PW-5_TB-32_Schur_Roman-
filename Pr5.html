@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична робота №5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+        }
+        .calculator-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        h2, h3 {
+            color: #000000;
+        }
+        label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        input {
+            width: 150px;
+            padding: 8px;
+            border: 1px solid #494848;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: right;
+        }
+        button {
+            background: #000000;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="calculator-wrapper">
+   <div class="calculator1" id="calc1">
+        <h2>Калькулятор для  порівняння надійності систем електропередачі</h2>
+        <label>Частота відмов елегазового вимикача (W): <input type="number" id="1" value="0.01"></label>
+        <label>Тривалість відновлення (Tв): <input type="number" id="2" value="30"></label>
+        <label>Частота відмов трансформатора Пл-110 кВ (W): <input type="number" id="3" value="0.07"></label>
+        <label>Тривалість відновлення (Tв): <input type="number" id="4" value="10"></label>
+        <label>Частота відмов трансформатора 110/10 кВ (W): <input type="number" id="5" value="0.015"></label>
+        <label>Тривалість відновлення (Tв): <input type="number" id="6" value="100"></label>
+        <label>Частота відмов відвідного вимикача 10 кВ (W): <input type="number" id="7" value="0.02"></label>
+        <label>Тривалість відновлення (Tв): <input type="number" id="8" value="15"></label>
+        <label>Частота відмов трансформатора 10 кВ (W): <input type="number" id="9" value="0.18"></label>
+        <label>Тривалість відновлення (Tв): <input type="number" id="10" value="2"></label>
+        <button onclick="calculate_1()">Обрахувати</button>
+        <div class="result" id="res_1"></div>
+    </div>
+    <div class="calculator2" id="calc2">
+        <h2>Калькулятор розрахунку збитків</h2>
+        <label>Ціна питомих збитків у разі переривання електропостачання (Зпер.а,грн/кВт*год): <input type="number" id="11" value="23.6"></label>
+        <label>Ціна питомих збитків у разі аварійного переривання електропостачання  (Зпер.п, грн/кВт*год): <input type="number" id="12" value="17.6"></label>
+        <button onclick="calculate_2()">Розрахувати потужність</button>
+        <div class="result" id="res_2"></div>
+    </div>
+</div>
+<script src="Pr5.js" defer></script>
+</body>
+</html>
+
